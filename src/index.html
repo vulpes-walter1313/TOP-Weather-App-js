@@ -4,9 +4,29 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Weather App</title>
 </head>
 <body>
-  
+  <div class="search-form-wrapper">
+    <form>
+      <h1>Check your Weather</h1>
+      <input type="text" name="city" placeholder="Type in the city you want" tabindex="0">
+      <div class="form-radio-btns">
+        <div class="radio-btn-group">
+          <input name="temp-unit" type="radio", id="temp-unit-imperial" value="imperial" tabindex="0" checked>
+          <label for="temp-unit-imperial">Imperial</label>
+        </div>
+        <div class="radio-btn-group">
+          <input name="temp-unit" type="radio", id="temp-unit-metric" tabindex="0" value="metric">
+          <label for="temp-unit-metric">Metric</label>
+        </div>
+      </div>
+      <button tabindex="0">Enter</button>
+    </form>
+  </div>
+  <div class="weather-results">
+
+  </div>
+  <main class="weather-info-display"></main>
 </body>
 </html>

@@ -1,0 +1,9 @@
+@use "./base";
+@use './reset';
+@use "./searchform";
+@use "./weatherdisplay";
+
+body {
+  background: var(--cl-1);
+  font-family: var(--ff-1);
+}

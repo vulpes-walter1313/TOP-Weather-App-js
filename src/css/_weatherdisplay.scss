@@ -1,0 +1,66 @@
+.weather-results {
+  width: min(80vw, var(--max-width));
+  margin: 0 auto;
+  padding: 1rem;
+  color: var(--cl-2);
+  h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    text-align: center;
+  }
+  .display-temps {
+    // The wrapper for the temps
+    margin: 1.5em 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas: 
+    "desc desc"
+    "curr max"
+    "curr min"
+    "rise humd"
+    "set humd";
+    gap: 1em;
+  }
+  .display-description {
+    grid-area: desc;
+  }
+  .display-curr-temp {
+    grid-area: curr;
+  }
+  .display-max-temp {
+    grid-area: max;
+  }
+  .display-min-temp {
+    grid-area: min;
+  }
+  .display-sunrise {
+    grid-area: rise;
+  }
+  .display-sunset {
+    grid-area: set;
+  }
+  .display-humidity {
+    grid-area: humd;
+  }
+
+  .display-temp {
+    // a class to select all temps within .display-temps
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cl-2);
+    padding: 1em 0;
+    font-size: 1.25rem;
+    color: var(--cl-3);
+  }
+  .display-err-msg {
+    background-color: var(--cl-5);
+    color: var(--cl-3);
+    text-align: center;
+    border-radius: 1rem;
+    height: 4rem;
+    padding: 1.4rem;
+    font-weight: 700;
+  }
+}
